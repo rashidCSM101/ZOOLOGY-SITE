@@ -172,7 +172,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all section cards
-document.querySelectorAll('.section-card, .faculty-grid, .attention-box, .timeline-card, .detailed-eligibility-card, .fee-structure-card, .important-notes, .hod-card').forEach(el => {
+document.querySelectorAll('.section-card, .faculty-grid, .attention-box, .timeline-card, .detailed-eligibility-card, .fee-structure-card, .important-notes, .hod-card, .gallery-header, .location-info').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(50px)';
     el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
@@ -335,6 +335,25 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+// Animate gallery items
+const galleryObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'scale(1)';
+            }, index * 100);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'scale(0.9)';
+    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    galleryObserver.observe(item);
 });
 
 // Console message

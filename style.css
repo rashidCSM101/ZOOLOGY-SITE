@@ -1281,6 +1281,286 @@ section {
     color: var(--yellow);
 }
 
+/* Campus Gallery Section */
+.campus-gallery {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 100px 0;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.gallery-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.gallery-icon svg {
+    color: white;
+}
+
+.gallery-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gallery-subtitle {
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+    opacity: 0.7;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.gallery-overlay p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+}
+
+/* Location & Map Section */
+.location-section {
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    padding: 100px 0;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.location-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.location-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(30, 91, 168, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.location-icon svg {
+    color: white;
+}
+
+.location-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.location-subtitle {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    opacity: 0.7;
+}
+
+.address-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.address-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.address-card h3 svg {
+    color: var(--primary-green);
+}
+
+.address-card p {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 5px 0;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card svg {
+    color: var(--primary-green);
+    flex-shrink: 0;
+}
+
+.info-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.info-card a {
+    color: var(--primary-blue);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+    color: var(--primary-green);
+}
+
+.directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.directions-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+}
+
+.map-container {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.map-overlay a {
+    background: white;
+    color: var(--primary-blue);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.map-overlay a:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: scale(1.05);
+}
+
 /* Footer */
 footer {
     background: var(--dark-blue);
@@ -1533,5 +1813,45 @@ footer p {
 
     .position-text h4 {
         font-size: 1.2rem;
+    }
+
+    /* Gallery Responsive */
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+    /* Location Section Responsive */
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .location-title {
+        font-size: 2rem;
+    }
+
+    .location-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+
+    .directions-btn {
+        width: 100%;
+        justify-content: center;
     }
 }
